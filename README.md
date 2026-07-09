@@ -1,5 +1,7 @@
 # RamerLabs WhatsApp Chat Pro
 
+![RamerLabs WhatsApp Chat Pro](assets/images/product.png)
+
 Smart WhatsApp floating chat widget for WordPress — route visitors by page, respect business hours, rotate agents, track clicks, and show GDPR consent before opening WhatsApp.
 
 ## Features
