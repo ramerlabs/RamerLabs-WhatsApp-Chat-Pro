@@ -2,48 +2,53 @@
 
 Customer-facing listing for ramerlabs.com. Do not mention internal licensing infrastructure.
 
+Styled HTML for the live store lives in:
+`C:/Users/Admin/Projects/scripts/product-descriptions/whatsapp-chat-pro.html`
+
 ## Product title
 RamerLabs WhatsApp Chat Pro
 
 ## Short description
-Smart WhatsApp chat widget with page routing, business hours, agent round-robin, GDPR consent, and click analytics.
+Meet customers on WhatsApp with smart routing, business hours, GDPR consent, and analytics — reply faster and close more sales from your WordPress site.
 
-## Long description
-Turn your WordPress site into a WhatsApp sales and support channel.
+## Long description (summary)
 
-**What you get:**
-- Floating WhatsApp chat button with online/offline status
-- Route visitors by page — sales, support, or billing
-- Business hours with “we’ll reply in X hours” messaging
+**Why WhatsApp on your website matters**
+- Higher conversions — chat visitors are closer to buying
+- Faster responses — familiar app, immediate feel
+- Less friction — one tap with a pre-filled message
+- More trust — real conversations for local and online businesses
+- Better follow-up — sales continue in WhatsApp after they leave
+
+**What you get**
+- Floating WhatsApp button with online/offline status
+- Smart page routing (sales, support, billing)
+- Business hours and reply-time messaging
 - Pre-filled messages from product, post, and page context
-- Multiple agents with automatic round-robin
-- GDPR consent modal before opening WhatsApp
-- Click analytics with UTM tracking in wp-admin
-- Gutenberg block, Elementor widget, and shortcode for inline buttons
+- Multiple agents with round-robin
+- GDPR consent modal
+- Click analytics and UTM tracking
+- Gutenberg, Elementor, and shortcode support
 
-**Perfect for:**
+**Perfect for**
 - WooCommerce stores
 - Local businesses and agencies
 - Service companies that sell on WhatsApp
 
-**How licensing works:**
+**How licensing works**
 1. Purchase on ramerlabs.com
-2. Receive your license key by email
-3. Install the plugin on your WordPress site
-4. Go to **WhatsApp Chat → License** and enter your key
-
-Works with any theme. WooCommerce optional for product-aware messages.
+2. Receive license key by email
+3. Install plugin and enter key under WhatsApp Chat → License
 
 **Support:** support@ramerlabs.com
 
 ## Suggested pricing
-- Single site: $49/year
-- 5 sites: $99/year
-- Agency unlimited: $199/year
+- Single site: $49 (lifetime)
 
 ## Tags (WooCommerce)
 whatsapp, live chat, woocommerce, customer support, lead generation, gdpr
 
 ## Internal notes (do not publish)
 - Product slug: `ramerlabs-whatsapp-chat-pro`
+- WooCommerce product ID: 272
 - License keys issued on ramerlabs.com
