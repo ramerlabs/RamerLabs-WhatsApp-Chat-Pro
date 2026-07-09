@@ -32,6 +32,13 @@ $agents = RLWC_Settings::get_agents();
 				<td><input type="color" name="rlwc[button_color]" value="<?php echo esc_attr( $settings['button_color'] ); ?>"></td>
 			</tr>
 			<tr>
+				<th><?php esc_html_e( 'Default country code', 'ramerlabs-whatsapp-chat-pro' ); ?></th>
+				<td>
+					<input type="text" class="small-text" name="rlwc[default_country_code]" value="<?php echo esc_attr( $settings['default_country_code'] ); ?>" placeholder="63">
+					<p class="rlwc-help"><?php esc_html_e( 'Used to convert local numbers (e.g. 0976…) to international format. Digits only, no +.', 'ramerlabs-whatsapp-chat-pro' ); ?></p>
+				</td>
+			</tr>
+			<tr>
 				<th><?php esc_html_e( 'Default agent', 'ramerlabs-whatsapp-chat-pro' ); ?></th>
 				<td>
 					<select name="rlwc[default_agent_id]">

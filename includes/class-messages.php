@@ -72,8 +72,35 @@ class RLWC_Messages {
 		return home_url( add_query_arg( array(), $GLOBALS['wp']->request ?? '' ) );
 	}
 
+	public static function normalize_phone( $phone, $country_code = '' ) {
+		$phone = preg_replace( '/[^0-9]/', '', (string) $phone );
+		$country_code = preg_replace( '/[^0-9]/', '', (string) $country_code );
+
+		if ( '' === $phone ) {
+			return '';
+		}
+
+		if ( '' !== $country_code && '0' === $phone[0] ) {
+			$phone = $country_code . substr( $phone, 1 );
+		}
+
+		return $phone;
+	}
+
 	public static function whatsapp_url( $phone, $message ) {
-		$phone = preg_replace( '/[^0-9]/', '', $phone );
-		return 'https://wa.me/' . $phone . '?text=' . rawurlencode( $message );
+		$settings = RLWC_Settings::get();
+		$phone    = self::normalize_phone( $phone, $settings['default_country_code'] ?? '' );
+
+		if ( '' === $phone ) {
+			return '';
+		}
+
+		return add_query_arg(
+			array(
+				'phone' => $phone,
+				'text'  => $message,
+			),
+			'https://api.whatsapp.com/send'
+		);
 	}
 }

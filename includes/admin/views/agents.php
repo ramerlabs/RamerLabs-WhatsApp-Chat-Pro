@@ -27,7 +27,7 @@ $departments = array( 'sales', 'support', 'billing', 'general' );
 					<input type="hidden" name="agents[<?php echo (int) $i; ?>][id]" value="<?php echo esc_attr( $agent['id'] ?? '' ); ?>">
 					<input type="text" name="agents[<?php echo (int) $i; ?>][name]" value="<?php echo esc_attr( $agent['name'] ?? '' ); ?>" placeholder="<?php esc_attr_e( 'Agent name', 'ramerlabs-whatsapp-chat-pro' ); ?>">
 				</td>
-				<td><input type="tel" name="agents[<?php echo (int) $i; ?>][phone]" value="<?php echo esc_attr( $agent['phone'] ?? '' ); ?>" placeholder="14155552671"></td>
+				<td><input type="tel" name="agents[<?php echo (int) $i; ?>][phone]" value="<?php echo esc_attr( $agent['phone'] ?? '' ); ?>" placeholder="639761052652"></td>
 				<td>
 					<select name="agents[<?php echo (int) $i; ?>][department]">
 						<?php foreach ( $departments as $dept ) : ?>

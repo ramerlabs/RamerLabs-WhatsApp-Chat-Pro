@@ -11,6 +11,7 @@ class RLWC_Settings {
 		return array(
 			'enabled'           => true,
 			'default_agent_id'  => '',
+			'default_country_code' => '',
 			'button_text'       => __( 'Chat on WhatsApp', 'ramerlabs-whatsapp-chat-pro' ),
 			'button_position'   => 'bottom-right',
 			'button_color'      => '#25D366',
@@ -142,8 +143,22 @@ class RLWC_Settings {
 	}
 
 	public static function save( $settings ) {
-		$current  = self::get();
-		$merged   = array_merge( $current, $settings );
+		// Unchecked HTML checkboxes are omitted from POST — set explicit false before merge.
+		foreach ( array( 'enabled', 'show_on_mobile', 'show_on_desktop', 'gdpr_enabled', 'append_utm' ) as $key ) {
+			$settings[ $key ] = ! empty( $settings[ $key ] );
+		}
+
+		if ( isset( $settings['business_hours'] ) && is_array( $settings['business_hours'] ) ) {
+			foreach ( array_keys( self::default_business_hours() ) as $day ) {
+				if ( ! isset( $settings['business_hours'][ $day ] ) || ! is_array( $settings['business_hours'][ $day ] ) ) {
+					$settings['business_hours'][ $day ] = array();
+				}
+				$settings['business_hours'][ $day ]['enabled'] = ! empty( $settings['business_hours'][ $day ]['enabled'] );
+			}
+		}
+
+		$current   = self::get();
+		$merged    = array_merge( $current, $settings );
 		$sanitized = self::sanitize( $merged );
 		update_option( self::OPTION_KEY, $sanitized );
 		return $sanitized;
@@ -155,6 +170,7 @@ class RLWC_Settings {
 
 		$out['enabled']          = ! empty( $settings['enabled'] );
 		$out['default_agent_id'] = sanitize_key( $settings['default_agent_id'] ?? '' );
+		$out['default_country_code'] = preg_replace( '/[^0-9]/', '', $settings['default_country_code'] ?? '' );
 		$out['button_text']      = sanitize_text_field( $settings['button_text'] ?? $defaults['button_text'] );
 		$out['button_position']  = in_array( $settings['button_position'] ?? '', array( 'bottom-right', 'bottom-left' ), true )
 			? $settings['button_position']
@@ -221,10 +237,12 @@ class RLWC_Settings {
 				continue;
 			}
 			$id = ! empty( $agent['id'] ) ? sanitize_key( $agent['id'] ) : 'agent_' . wp_generate_password( 8, false, false );
+			$phone = preg_replace( '/[^0-9+]/', '', $agent['phone'] ?? '' );
+			$phone = RLWC_Messages::normalize_phone( $phone, self::get()['default_country_code'] );
 			$sanitized[] = array(
 				'id'         => $id,
 				'name'       => sanitize_text_field( $agent['name'] ?? '' ),
-				'phone'      => preg_replace( '/[^0-9+]/', '', $agent['phone'] ?? '' ),
+				'phone'      => $phone,
 				'department' => sanitize_key( $agent['department'] ?? 'general' ),
 				'enabled'    => ! empty( $agent['enabled'] ),
 			);
