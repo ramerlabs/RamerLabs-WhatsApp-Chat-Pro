@@ -1,0 +1,91 @@
+/**
+ * RamerLabs client plugin license screen — SaaS UI
+ */
+.rlm-client-wrap {
+	max-width: 720px;
+}
+
+.rlm-client-hero {
+	padding: 22px 24px;
+	border-radius: 20px;
+	background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #6366f1 100%);
+	color: #fff;
+	box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+	margin: 12px 0 20px;
+}
+
+.rlm-client-hero__brand {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	opacity: 0.9;
+	margin-bottom: 8px;
+}
+
+.rlm-client-hero__title {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.rlm-client-card {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 22px 24px;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.rlm-client-status {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.rlm-client-status--active {
+	background: #ecfdf5;
+	color: #10b981;
+}
+
+.rlm-client-status--inactive {
+	background: #fef2f2;
+	color: #ef4444;
+}
+
+.rlm-client-wrap .form-table input[type="text"] {
+	border-radius: 10px;
+	border-color: #e2e8f0;
+}
+
+.rlm-client-wrap .button-primary {
+	background: #4f46e5 !important;
+	border-color: #4f46e5 !important;
+	border-radius: 10px !important;
+	box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+.rlm-client-wrap .button-primary:hover {
+	background: #4338ca !important;
+	border-color: #4338ca !important;
+}
+
+.rlm-client-footer {
+	margin-top: 16px;
+	font-size: 13px;
+	color: #64748b;
+}
+
+.rlm-client-footer a {
+	color: #4f46e5;
+	font-weight: 600;
+	text-decoration: none;
+}

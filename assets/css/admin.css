@@ -1,0 +1,93 @@
+.rlwc-admin-wrap {
+	max-width: 1100px;
+}
+
+.rlwc-admin-hero {
+	padding: 22px 24px;
+	border-radius: 20px;
+	background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #6366f1 100%);
+	color: #fff;
+	box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+	margin: 12px 0 20px;
+}
+
+.rlwc-admin-hero h1 {
+	margin: 0;
+	color: #fff;
+	font-size: 1.6rem;
+}
+
+.rlwc-admin-hero p {
+	margin: 8px 0 0;
+	opacity: 0.92;
+}
+
+.rlwc-admin-card {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 22px 24px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.rlwc-admin-card h2 {
+	margin-top: 0;
+	font-size: 1.1rem;
+}
+
+.rlwc-admin-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 16px;
+}
+
+.rlwc-stat {
+	padding: 16px;
+	border-radius: 14px;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+}
+
+.rlwc-stat strong {
+	display: block;
+	font-size: 1.8rem;
+	color: #4f46e5;
+}
+
+.rlwc-admin-wrap .button-primary {
+	background: #4f46e5 !important;
+	border-color: #4f46e5 !important;
+	border-radius: 10px !important;
+}
+
+.rlwc-admin-wrap table.widefat {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.rlwc-admin-wrap .form-table th {
+	width: 220px;
+}
+
+.rlwc-badge {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 600;
+	background: #eef2ff;
+	color: #4f46e5;
+}
+
+.rlwc-agent-row td input[type="text"],
+.rlwc-agent-row td input[type="tel"],
+.rlwc-rule-row td input[type="text"],
+.rlwc-rule-row td select {
+	width: 100%;
+}
+
+.rlwc-help {
+	color: #64748b;
+	font-size: 13px;
+}
