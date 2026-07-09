@@ -37,6 +37,13 @@ class RLWC_License {
 		return self::$client && self::$client->is_valid();
 	}
 
+	/**
+	 * Whether chat widget, blocks, and shortcodes may render on the front end.
+	 */
+	public static function can_show_frontend() {
+		return self::is_valid();
+	}
+
 	public static function admin_notice() {
 		if ( self::is_valid() || ! current_user_can( 'manage_options' ) ) {
 			return;
@@ -46,7 +53,7 @@ class RLWC_License {
 		}
 		printf(
 			'<div class="notice notice-warning"><p>%s <a href="%s">%s</a> — %s <a href="%s" target="_blank">%s</a></p></div>',
-			esc_html__( 'WhatsApp Chat Pro is not activated yet.', 'ramerlabs-whatsapp-chat-pro' ),
+			esc_html__( 'WhatsApp Chat Pro is not activated yet. The chat widget is hidden until you enter a valid license key.', 'ramerlabs-whatsapp-chat-pro' ),
 			esc_url( admin_url( 'admin.php?page=rlwc-license' ) ),
 			esc_html__( 'Enter your license key', 'ramerlabs-whatsapp-chat-pro' ),
 			esc_html__( 'Need a key?', 'ramerlabs-whatsapp-chat-pro' ),

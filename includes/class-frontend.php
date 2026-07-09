@@ -84,6 +84,10 @@ class RLWC_Frontend {
 	}
 
 	public static function render_button( $atts = array() ) {
+		if ( ! RLWC_License::can_show_frontend() ) {
+			return '';
+		}
+
 		$atts = wp_parse_args(
 			$atts,
 			array(

@@ -145,6 +145,10 @@ class RLWC_Routing {
 	}
 
 	public static function should_show_widget() {
+		if ( ! RLWC_License::can_show_frontend() ) {
+			return false;
+		}
+
 		$settings = RLWC_Settings::get();
 		if ( empty( $settings['enabled'] ) ) {
 			return false;

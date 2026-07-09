@@ -9,7 +9,7 @@ Styled HTML for the live store lives in:
 RamerLabs WhatsApp Chat Pro
 
 ## Short description
-Meet customers on WhatsApp with smart routing, business hours, GDPR consent, and analytics — reply faster and close more sales from your WordPress site.
+Meet customers on WhatsApp with smart routing, business hours, GDPR consent, and analytics. Reply faster and close more sales from your WordPress site.
 
 ## Long description (summary)
 

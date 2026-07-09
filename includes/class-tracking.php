@@ -29,6 +29,10 @@ class RLWC_Tracking {
 	}
 
 	public static function record_click( WP_REST_Request $request ) {
+		if ( ! RLWC_License::can_show_frontend() ) {
+			return new WP_REST_Response( array( 'success' => false ), 403 );
+		}
+
 		global $wpdb;
 
 		$agent_id = $request->get_param( 'agent_id' );

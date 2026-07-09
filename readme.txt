@@ -4,7 +4,7 @@ Tags: whatsapp, chat, woocommerce, support, live chat
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ RamerLabs WhatsApp Chat Pro adds a floating WhatsApp button that does more than 
 5. Enter your license key under WhatsApp Chat → License
 
 == Changelog ==
+
+= 1.0.4 =
+* Require valid license before showing frontend widget, blocks, shortcode, and click tracking
 
 = 1.0.3 =
 * Fix: Use api.whatsapp.com links (avoids wa.me SSL/DNS issues on some networks)

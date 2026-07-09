@@ -43,7 +43,7 @@ Smart WhatsApp floating chat widget for WordPress — route visitors by page, re
 
 ## Version
 
-1.0.3
+1.0.4
 
 ## Author
 
