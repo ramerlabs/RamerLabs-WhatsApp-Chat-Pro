@@ -46,5 +46,4 @@ whatsapp, live chat, woocommerce, customer support, lead generation, gdpr
 
 ## Internal notes (do not publish)
 - Product slug: `ramerlabs-whatsapp-chat-pro`
-- License keys issued on plugins.ramerlabs.com
-- Customers never see plugins.ramerlabs.com
+- License keys issued on ramerlabs.com
